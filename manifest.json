@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Katastr",
+  "description": "This extension will make a bit of automation around getting info from Katastr",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "index.html"
+  },
+  "permissions": [
+   "tabs", "storage"
+  ],
+  "content_scripts": [
+        {
+            "matches": [
+                "http://nahlizenidokn.cuzk.cz/*"
+            ],
+            "js": [
+                "jquery-3.1.1.min.js",
+                "content.js"
+            ]
+        }
+  ]
+}
